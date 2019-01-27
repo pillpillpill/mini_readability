@@ -3,5 +3,6 @@
 build
 dist
 venv
+articles
 .idea
 .cache

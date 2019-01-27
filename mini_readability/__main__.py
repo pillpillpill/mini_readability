@@ -8,11 +8,12 @@ from mini_readability.article_parser import SiteArticleParser
 if __name__ == "__main__":
     # command line parsing
     cl_parser = argparse.ArgumentParser(
-        usage='mini_readability [-h] [-l {notset,debug,info,warning,error,critical}] url',
+        usage='mini_readability [-h] [-t] [-l {notset,debug,info,warning,error,critical}] url',
     )
     cl_parser.add_argument('url', help='URL to parse')
     cl_parser.add_argument('-l', '--log', help='log level',
                            choices=['notset', 'debug', 'info', 'warning', 'error', 'critical'], default='info')
+    cl_parser.add_argument("-t", "--test", action="store_true", help='add test pages')
     args = cl_parser.parse_args()
     url = args.url
     loglevel = args.log
