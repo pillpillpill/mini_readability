@@ -4,6 +4,7 @@ import argparse
 import logging
 
 from mini_readability.article_parser import SiteArticleParser
+from mini_readability.tester import main as test_parser
 
 if __name__ == "__main__":
     # command line parsing
@@ -29,3 +30,7 @@ if __name__ == "__main__":
     # site parsing
     content_parser = SiteArticleParser()
     content_parser.parse(url)
+
+    # test
+    if args.test:
+        test_parser()

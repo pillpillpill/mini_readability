@@ -2,7 +2,7 @@
 
 import logging
 
-import article_parser
+from mini_readability.article_parser import SiteArticleParser
 
 urls = [
     'https://meduza.io/feature/2019/01/25/ya-dumal-chto-s-moey-vneshnostyu-i-moim-golosom-igrat-etogo-parnya-prosto-samoubiystvo',
@@ -35,7 +35,7 @@ def main():
         if not isinstance(numeric_level, int):
             raise ValueError('Invalid log level: %s' % loglevel)
         logging.basicConfig(format='%(levelname)s:%(message)s', level=numeric_level)
-        parser = article_parser.SiteArticleParser()
+        parser = SiteArticleParser()
         parser.parse(url)
 
 
