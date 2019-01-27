@@ -1,7 +1,7 @@
 # Mini Readability
 
-######Utility for parse site articles
-######_Утилита для парсинга полезной информации из сайтов_
+###### Utility for parse site articles
+###### _Утилита для парсинга полезной информации из сайтов_
 
 ## Installing/Установка
 In your command-line type
